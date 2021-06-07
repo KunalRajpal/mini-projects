@@ -46,12 +46,12 @@ void Draw()
             //snake head
             if(i == y && j== x)
             {
-                cout<< "O";
+                cout<< "<<";
             }
             //Fruit
             else if( i == fruitY && j == fruitX)
             {
-                cout << "F";
+                cout << "X";
             }
             //black space
             else
@@ -116,7 +116,23 @@ void Input()
 
 void Logic()
 {
-
+    switch (dir)
+    {
+    case LEFT:
+        x--;
+        break;
+    case RIGHT:
+        x++;
+        break;
+    case UP:
+        y--;
+        break;
+    case DOWN:
+        y++;
+        break;            
+    default:
+        break;
+    }
 }
 
 int main()
