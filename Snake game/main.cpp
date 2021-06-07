@@ -58,6 +58,13 @@ void Draw()
             //black space
             else
             {
+                for(int k=0; k <nTail; k++)
+                {
+                    if(tailX[k] == j && tailY[k] == i)
+                    {
+                        cout << "="; //printing tail
+                    }
+                }
                 cout << " ";
             }
             //ending border
@@ -126,8 +133,8 @@ void Logic()
     {
         prev2X = tailX[i];
         prev2Y = tailY[i];
-        tailX = prevX;
-        tailY = prevY;
+        tailX[i] = prevX;
+        tailY[i] = prevY;
         prevX = prev2X;
         prevY = prev2Y;
     }
