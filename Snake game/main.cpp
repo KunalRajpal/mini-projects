@@ -1,4 +1,5 @@
 #include <iostream>
+#include <conio.h> // conio.h imports console input and output
 
 using namespace std;
 
@@ -76,7 +77,41 @@ void Draw()
 
 void Input()
 {
-
+    if(_kbhit()) //returns a positive number if the keyboard key is pressed -- comes from conio.h
+    {
+        switch (_getch())
+        {
+        case 'a':
+            dir = LEFT;
+            break;
+        case 'd':
+            dir = RIGHT;
+            break;
+        case 'w':
+            dir = UP;
+            break;
+        case 's':
+            dir = DOWN;
+            break;
+        case 'A':
+            dir = LEFT;
+            break;
+        case 'D':
+            dir = RIGHT;
+            break;
+        case 'W':
+            dir = UP;
+            break;
+        case 'S':
+            dir = DOWN;
+            break;
+        case 'x':
+            gameOver = true;
+            break;         
+        default:
+            break;
+        }
+    }
 }
 
 void Logic()
