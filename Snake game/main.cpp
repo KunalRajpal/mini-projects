@@ -24,36 +24,54 @@ void Setup()
 void Draw()
 {
     system("cls"); //clears the system in terminal of windows
+
+    //inital border: the first line ######################
     for(int i=0; i< width; i++)
     {
         cout << "#";
     }
     cout << endl;
 
+    
     for(int i=0; i < height; i++)
     {
         for(int j = 0; j < width; j++)
         {
+            //side borders
             if(j == 0)
             {
                 cout << "#";
             }
-            else{
+            //snake head
+            if(i == y && j== x)
+            {
+                cout<< "O";
+            }
+            //Fruit
+            else if( i == fruitY && j == fruitX)
+            {
+                cout << "F";
+            }
+            //black space
+            else
+            {
                 cout << " ";
             }
-
-            if(j == width -1)
+            //ending border
+            if(j == width - 1)
             {
                 cout << "#";
-            }
+            }// for J end
         }
         cout << endl;
-    }
+    }//for I end
+
     for(int i=0; i <width+2; i++)
     {
         cout << "#";
     }
     cout << endl;
+    cout << "Score: " << score << endl;
 }
 
 void Input()
