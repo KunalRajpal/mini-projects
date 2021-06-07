@@ -58,14 +58,19 @@ void Draw()
             //black space
             else
             {
+                bool print  = false;
                 for(int k=0; k <nTail; k++)
                 {
                     if(tailX[k] == j && tailY[k] == i)
                     {
                         cout << "="; //printing tail
+                        print = true;
                     }
                 }
-                cout << " ";
+                if(!print)
+                {
+                    cout << " ";
+                }
             }
             //ending border
             if(j == width - 1)
