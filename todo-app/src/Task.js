@@ -3,7 +3,11 @@ import React from "react";
 export default function Tasks({ task}){
     return (
         <div>
-            {task}
+            <label>
+                <input type = "checkbox" checked = {task.complete} />
+                {task.name}
+            </label>
+            
         </div>
     )
 }
