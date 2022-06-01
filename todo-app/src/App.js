@@ -4,7 +4,7 @@ import TodoList from './TodoList';
 function App() {
   //this is called object destructuring 
    //? Read more here: https://www.youtube.com/watch?v=NIq3qLaHCIs
-   const [tasks, setTodos] = useState(['Task #1', 'Task #2'])
+   const [tasks, setTasks] = useState(['Task #1', 'Task #2'])
 
   return (
     // tasks and todos here are called props
